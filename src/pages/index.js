@@ -1,5 +1,10 @@
-import React from "react"
+import React from 'react'
+import SignUp from "../components/SignUp"
 
-export default function Home() {
-  return <div>Hello world!</div>
+const Home = () => {
+    return (
+      <SignUp />
+    )
 }
+
+export default Home

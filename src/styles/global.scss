@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    box-sizing: border-box;
+    font-size: 1.25rem; // 20px
+    --main-shadow: 0 10px 20px #0000001a;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+    height: 100%;
+}
+
+body {
+    @apply font-body bg-gray-light;
+}
+
+main {
+    @apply mb-32; //this is contain the main layout component
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    @apply font-display font-bold text-gray-full capitalize my-6;
+}
+
+h1 {
+    @apply text-jumbo;
+}
+
+h2 {
+    @apply text-xl;
+}
+
+h3 {
+    @apply text-lg;
+}
+
+p,
+a,
+button {
+    @apply my-4;
+}
+
+a {
+    @apply underline;
+
+    &:hover {
+        @apply no-underline;
+    }
+}
+
+.message-component {
+    @apply py-4 px-2;
+}
+
+// CTAs
+.cta {
+    @apply px-8 py-10 rounded-base cursor-pointer;
+    max-width: fit-content;
+
+    transition: all 0.4s;
+}
+
+.cta-icon-primary {
+    @apply bg-gray-medium border-2 border-gray-medium;
+
+    &:hover {
+        @apply bg-gray-light;
+    }
+}
+
+.cta-icon-secondary {
+    @apply bg-gray-light border-2 border-primary;
+
+    &:hover {
+        @apply bg-primary;
+        img {
+            filter: brightness(3);
+        }
+    }
+}
+
+// Carousel food categories
+.carousel-category-wrapper {
+    @apply relative flex flex-row flex-nowrap my-24 py-8 px-4 overflow-x-scroll;
+}
+
+.capsule {
+    @apply bg-gray-medium mx-10 px-3 py-4 rounded-base text-center cursor-pointer;
+    min-width: fit-content;
+    transition: all 0.4s;
+
+    &:last-child::after {
+        content: ".";
+        color: transparent;
+        width: 8rem;
+        position: absolute;
+    }
+
+    p {
+        @apply m-0 capitalize;
+    }
+}
+
+.capsule:hover,
+.capsule-active {
+    @apply bg-gray-light;
+    box-shadow: var(--main-shadow);
+}
+
+
