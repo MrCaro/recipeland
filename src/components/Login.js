@@ -38,7 +38,6 @@ class LogIn extends React.Component {
               method="post"
               onSubmit={event => {
                 this.handleSubmit(event)
-                navigate(`/user/profile`)
               }}
             >
               <input 
