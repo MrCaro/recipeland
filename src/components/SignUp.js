@@ -61,7 +61,7 @@ class SignUp extends React.Component {
                 style={{width: '100%', borderRadius: '10px'}}
               />
               <input 
-                className="my-12 mr-4"
+                className="mb-12 mr-4"
                 type="checkbox" 
                 name="terms" 
                 value="terms" 

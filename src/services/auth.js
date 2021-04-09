@@ -13,9 +13,9 @@ const setUser = user => {
   window.localStorage.setItem("gatsbyUser", JSON.stringify(user))
 }
 
+// find alt way to store error message
 export const MessageAuth = (error) => {
   window.localStorage.setItem("formError", error)
-  return window.localStorage.getItem("formError");
 }
 
 export const handleLogin = ({ email, password }) => {
@@ -28,7 +28,7 @@ export const handleLogin = ({ email, password }) => {
   })
   .then(() => {
     if(isLoggedIn()) {
-      navigate(`/user/login`);
+      navigate(`/user/profile`);
     }
   })
   .catch((error) => {

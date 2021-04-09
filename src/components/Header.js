@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, navigate } from 'gatsby'
-
 import Search from './Search'
 import { getUser, isLoggedIn, logout } from "../services/auth"
 
@@ -15,7 +14,7 @@ const Header = () => {
     return (
         <>
         <div className="bg-primary py-6">
-            <nav className="container sm:mx-auto px-4 flex flex-wrap lg:justify-between justify-end items-center">
+            <nav className="container sm:mx-auto px-4 flex lg:justify-between justify-end items-center">
                 <h1>
                     welcome to recipeland {greetingMessage} 🍴
                 </h1>
@@ -26,14 +25,12 @@ const Header = () => {
             </nav>
         </div>
         <div className="container sm:mx-auto px-4">
-            <Link to="/">home</Link>
-            <Link to="/user/profile">profile</Link>
             {isLoggedIn() ? (
             <Link
-                to="/"
+                to="/user/login"
                 onClick={event => {
                 event.preventDefault()
-                logout(() => navigate(`/`))
+                logout(() => navigate(`/user/login`))
                 }}
             >
                 logout

@@ -2,6 +2,7 @@ import React from 'react'
 import { Router } from "@reach/router"
 import PrivateRoute from "../components/PrivateRoute"
 import Profile from "../components/Profile"
+import { Recipes } from "../pages/recipes"
 import SignUp from "../components/SignUp"
 import LogIn from "../components/Login"
 
